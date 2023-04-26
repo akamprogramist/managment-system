@@ -20,3 +20,4 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('customer/create', [CustomerController::class, 'create']);
+Route::post('customer', [CustomerController::class, 'store']);

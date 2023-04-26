@@ -13,6 +13,24 @@ return new class extends Migration
     {
         Schema::create('customers', function (Blueprint $table) {
             $table->id();
+            $table->string('fullname');
+            $table->string('email');
+            $table->string('code');
+            $table->string('secondaryemail');
+            $table->string('displayname');
+            $table->string('phone');
+            $table->string('company');
+            $table->enum('currency', ['usd', 'iqd'])->default('usd');
+            $table->string('businessnumber');
+            $table->enum('group', ['none', 'default'])->default('none');
+            $table->string('type');
+            $table->enum('owner', ['none', 'default'])->default('none');
+            $table->string('address');
+            $table->string('city');
+            $table->string('state');
+            $table->string('zip');
+            $table->string('country');
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }
