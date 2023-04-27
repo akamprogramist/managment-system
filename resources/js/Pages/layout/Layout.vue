@@ -15,7 +15,7 @@ let accounting = ref(false);
 function Menuaccounting() {
     accounting.value = !accounting.value;
 }
-// const user = computed(() => usePage().props.auth.user);
+const user = computed(() => usePage().props.auth.user);
 </script>
 <template>
     <nav
@@ -50,21 +50,21 @@ function Menuaccounting() {
                         >
                     </Link>
                 </div>
-                <Dropdown title="akam kamal">
+                <Dropdown :title="`${user.name}`">
                     <template #MenuItem>
                         <div class="capitalize">
-                            <Link href="/localNGOs/manage">
+                            <Link href="/customer">
                                 <div
                                     class="w-full text-left px-5 items-center py-2 text-sm hover:bg-blue-500 hover:text-white"
                                 >
-                                    Manage LocalNGOs
+                                    Manage Customer
                                 </div>
                             </Link>
-                            <Link href="/users/manage">
+                            <Link href="/customer/create">
                                 <div
                                     class="w-full text-left px-5 items-center py-2 text-sm hover:bg-blue-500 hover:text-white"
                                 >
-                                    Manage Users
+                                    Add Customer
                                 </div>
                             </Link>
                             <Link

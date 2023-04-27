@@ -1,8 +1,12 @@
-<script setup></script>
+<script setup>
+import Card from "./components/Card.vue";
+</script>
 <template>
-    <div>
-        <p class="bg-red-500">akam</p>
-    </div>
+    <Card>
+        <div>
+            <p>welcome back</p>
+        </div>
+    </Card>
 </template>
 
 <style lang="scss" scoped></style>

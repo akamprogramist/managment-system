@@ -111,12 +111,13 @@
                                 ></i>
                             </Link>
                             <button
-                                @click="destroy()"
                                 class="bg-gray-200 px-3 py-1.5 rounded-md hover:opacity-70"
                             >
-                                <i
-                                    class="fa-solid fa-pen text-sm text-gray-600"
-                                ></i>
+                                <Link :href="`/customer/${customer.id}/edit`">
+                                    <i
+                                        class="fa-solid fa-pen text-sm text-gray-600"
+                                    ></i>
+                                </Link>
                             </button>
                         </td>
                     </tr>

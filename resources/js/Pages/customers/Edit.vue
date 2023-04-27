@@ -23,6 +23,14 @@
                     <i class="fa-solid fa-house"></i>
                     <Link :href="`/customer/${customers.id}/edit`"> Edit </Link>
                 </div>
+                <div
+                    class="flex items-center gap-2 w-full rounded-r-full capitalize text-left px-8 py-2"
+                >
+                    <i class="fa-solid fa-house"></i>
+                    <Link :href="`/customer/${customers.id}/todo`">
+                        Activity
+                    </Link>
+                </div>
             </div>
         </div>
 

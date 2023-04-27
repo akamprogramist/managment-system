@@ -23,11 +23,19 @@
                     <i class="fa-solid fa-house"></i>
                     <Link :href="`/customer/${customer.id}/edit`"> Edit </Link>
                 </div>
+                <div
+                    class="flex items-center gap-2 w-full rounded-r-full capitalize text-left px-8 py-2"
+                >
+                    <i class="fa-solid fa-house"></i>
+                    <Link :href="`/customer/${customer.id}/todo`">
+                        activity
+                    </Link>
+                </div>
             </div>
         </div>
         <div class="w-full">
-            <p class="mt-16 w-64 mb-5 text-2xl capitalize">akam kamal</p>
-            <Card class="mx-0 mt-0 px-5 py-5 space-y-1">
+            <p class="mt-16 w-64 mb-3 text-2xl capitalize">akam kamal</p>
+            <Card class="px-5 py-5 space-y-1">
                 <div class="flex gap-5 justify-between border-b border-dashed">
                     <div>
                         <div class="flex capitalize text-sm">
@@ -60,12 +68,12 @@
                     </div>
                 </div>
                 <div class="py-3 border-b border-dashed">
-                    <!-- <Link
+                    <Link
                         class="px-4 py-2 bg-yellow-400 text-white rounded-lg text-sm"
                         :href="`/customer/${customer.id}/edit`"
                     >
                         Edit
-                    </Link> -->
+                    </Link>
                 </div>
                 <div class="py-3 border-b border-dashed">
                     <p class="font-semibold mb-2 text-xl">Balance : $ 0.00</p>
