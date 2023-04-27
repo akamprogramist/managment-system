@@ -101,7 +101,7 @@ function Menuaccounting() {
                         'bg-blue-500 text-white': $page.url === '/',
                     }"
                 >
-                    <i class="fa-solid fa-user text-xl"></i>
+                    <i class="fa-solid fa-house text-xl"></i>
                     <span class="ml-3 font-semibold">dashboard</span>
                 </Link>
             </li>
@@ -138,10 +138,10 @@ function Menuaccounting() {
                         >
                     </li>
                     <li>
-                        <a
-                            href="#"
+                        <Link
+                            href="/customer"
                             class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100"
-                            >List Customer</a
+                            >List Customer</Link
                         >
                     </li>
                 </ul>

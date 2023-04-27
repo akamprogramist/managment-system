@@ -19,5 +19,10 @@ Route::get('/', function () {
     return Inertia::render('Welcome');
 })->name('home');
 
+Route::get('customer', [CustomerController::class, 'index']);
 Route::get('customer/create', [CustomerController::class, 'create']);
 Route::post('customer', [CustomerController::class, 'store']);
+Route::get('customer/{customer}', [CustomerController::class, 'show']);
+Route::get('customer/{customer}/edit', [CustomerController::class, 'edit']);
+Route::post('customer/{customer}', [CustomerController::class, 'update']);
+Route::delete('customer/{customer}', [CustomerController::class, 'destroy']);
