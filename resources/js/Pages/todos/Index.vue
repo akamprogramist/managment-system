@@ -97,7 +97,7 @@ function destroy(id) {
                                 class="border p-2 space-y-4 w-full border-r-white border-b-white hover:bg-gray-100"
                             >
                                 <p class="font-semibold text-gray-900">
-                                    {{ todo.user_id }}
+                                    {{ todo.user_name }}
                                 </p>
                                 <p class="text-gray-700 text-sm">
                                     {{ todo.todo }}

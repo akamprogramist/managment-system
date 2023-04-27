@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Todo;
+use App\Models\User;
 use Inertia\Inertia;
 use App\Models\Customer;
 use Illuminate\Support\Facades\Request;
@@ -17,7 +18,7 @@ class TodoController extends Controller
                 return [
                     'id' => $todo->id,
                     'todo' => $todo->todo,
-                    'user_id' => $todo->user_id,
+                    'user_name' => auth()->user()->name,
                     'created_at' => $todo->created_at->format('y/m/d'),
                     'created_atago' => $todo->created_at->diffForHumans(),
                 ];
