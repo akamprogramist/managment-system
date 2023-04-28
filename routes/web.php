@@ -2,9 +2,10 @@
 
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserController;
-use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\TodoController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\BillsController;
+use App\Http\Controllers\CustomerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,11 +18,11 @@ use App\Http\Controllers\TodoController;
 |
 */
 
-Route::get('/', function () {
-    return Inertia::render('Welcome');
-})->name('home');
 
 Route::middleware('auth')->group(function () {
+    Route::get('/', function () {
+        return Inertia::render('Welcome');
+    })->name('home');
 
     // customer routes
     Route::get('customer', [CustomerController::class, 'index'])->name('customer');
@@ -36,6 +37,11 @@ Route::middleware('auth')->group(function () {
     Route::get('customer/{customer}/todo', [TodoController::class, 'index'])->name('todo');
     Route::post('/todo/{todo}', [TodoController::class, 'store']);
     Route::delete('/todo/{todo}', [TodoController::class, 'destroy']);
+
+    // bills
+    Route::get('/bills', [BillsController::class, 'index'])->name('bills');
+    Route::get('/bills/create', [BillsController::class, 'create']);
+    Route::get('/bills', [BillsController::class, 'store']);
 });
 
 
