@@ -39,9 +39,10 @@ Route::middleware('auth')->group(function () {
     Route::delete('/todo/{todo}', [TodoController::class, 'destroy']);
 
     // bills
-    Route::get('/bills', [BillsController::class, 'index'])->name('bills');
-    Route::get('/bills/create', [BillsController::class, 'create']);
-    Route::get('/bills', [BillsController::class, 'store']);
+    Route::get('bills', [BillsController::class, 'index'])->name('bills');
+    Route::get('bills/upcoming', [BillsController::class, 'upcoming']);
+    Route::get('bills/create', [BillsController::class, 'create']);
+    Route::post('bills', [BillsController::class, 'store']);
 });
 
 

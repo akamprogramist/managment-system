@@ -207,7 +207,7 @@ const user = computed(() => usePage().props.auth.user);
             </li>
         </div>
     </aside>
-    <div class="bg-[#E8E9F5] ml-64 py-4">
+    <div class="pl-64 py-4">
         <slot />
     </div>
 </template>

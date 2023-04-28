@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->string('title');
-            $table->timestamp('nextduedate');
+            $table->date('nextduedate');
             $table->enum('repeat', ['monthly', 'weekly'])->default('monthly');
             $table->enum('currency', ['usd', 'iqd'])->default('usd');
             $table->decimal('amount', 8, 2);

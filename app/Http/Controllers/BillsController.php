@@ -11,7 +11,13 @@ class BillsController extends Controller
     public function index()
     {
         return Inertia::render('bills/Index', [
-            'bills' => Bills::latest()->paginate(6)->withQueryString(),
+            'bills' => Bills::latest()->paginate(6)
+        ]);
+    }
+    public function upcoming()
+    {
+        return Inertia::render('bills/Upcoming', [
+            'bills' => Bills::latest()->paginate(6)
         ]);
     }
     public function create()
