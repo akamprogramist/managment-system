@@ -1,10 +1,10 @@
 <template>
-    <div class="bg-gray-300 p-3 rounded-lg w-96 text-sm">
+    <div class="bg-gray-100 p-3 rounded-lg w-96 text-sm">
         <Link
             href="/bills/upcoming"
-            class="flex items-center px-5 py-2 text-white w-full rounded-lg"
+            class="flex items-center px-5 py-2 text-violet-500 w-full rounded-lg"
             :class="{
-                'bg-blue-500 text-white shadow-lg':
+                'bg-violet-500 text-white shadow-lg':
                     $page.url === '/bills/upcoming',
             }"
         >
@@ -12,18 +12,18 @@
         </Link>
         <Link
             href="/bills"
-            class="flex items-center px-5 py-2 text-white w-full rounded-lg"
+            class="flex items-center px-5 py-2 text-violet-500 w-full rounded-lg"
             :class="{
-                'bg-blue-500 text-white shadow-lg': $page.url === '/bills',
+                'bg-violet-500 text-white shadow-lg': $page.url === '/bills',
             }"
         >
             <i class="fa-solid fa-list mr-3"></i>All
         </Link>
         <Link
             href="/bills/create"
-            class="flex items-center px-5 py-2 text-white w-full rounded-lg"
+            class="flex items-center px-5 py-2 text-violet-500 w-full rounded-lg"
             :class="{
-                'bg-blue-500 text-white shadow-lg':
+                'bg-violet-500 text-white shadow-lg':
                     $page.url === '/bills/create',
             }"
         >

@@ -25,7 +25,7 @@
                     <table class="w-full whitespace">
                         <thead>
                             <tr
-                                class="text-left font-semibold capitalize bg-violet-200"
+                                class="text-left font-semibold capitalize bg-gray-100"
                             >
                                 <td class="text-xs px-2 py-2">title</td>
                                 <td class="text-xs px-2 py-2">amount</td>
@@ -48,7 +48,7 @@
                                 </td>
                                 <td class="align-top py-3">
                                     <p class="px-2 font-semibold text-sm">
-                                        {{ bill.amount }}
+                                        $ {{ bill.amount }}
                                     </p>
                                 </td>
                                 <td class="align-top py-3">
