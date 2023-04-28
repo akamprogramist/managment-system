@@ -48,9 +48,7 @@
         <div class="bg-white overflow-x-auto px-4">
             <table class="w-full whitespace">
                 <thead>
-                    <tr
-                        class="text-left font-semibold capitalize bg-violet-200"
-                    >
+                    <tr class="text-left font-semibold capitalize bg-violet-50">
                         <td class="text-xs w-20 px-2 py-2">image</td>
                         <td class="text-xs px-2 py-2">name</td>
                         <td class="text-xs px-2 py-2">email</td>
@@ -68,9 +66,12 @@
                                 class="pl-2 pr-2 py-2 bg-gray-100 focus:text-indigo-500"
                             >
                                 <img
-                                    src="../../../../storage/app/public/images/akam.png"
+                                    :src="`${
+                                        customer.image
+                                            ? `storage/${customer.image}`
+                                            : `storage/images/no-image.jpg`
+                                    } `"
                                     class="h-10 w-10 object-cover rounded-full"
-                                    alt=""
                                 />
                             </p>
                         </td>

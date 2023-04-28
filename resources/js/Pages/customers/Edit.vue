@@ -1,42 +1,10 @@
 <template>
     <div class="flex">
-        <div class="rounded-lg mt-16 w-64">
-            <img
-                src="../../../../storage/app/public/images/akam.png"
-                class="h-36 w-36 mx-auto object-cover rounded-full"
-                alt=""
-            />
-            <div class="text-center my-5 text-gray-700 font-semibold space-y-1">
-                <p>akam@gmail.com</p>
-                <p>07700656816</p>
-            </div>
-            <div class="">
-                <div
-                    class="flex items-center gap-2 text-white w-full rounded-r-full bg-gray-600 capitalize text-left px-8 py-2"
-                >
-                    <i class="fa-solid fa-house"></i>
-                    <Link :href="`/customer/${customers.id}`"> summary </Link>
-                </div>
-                <div
-                    class="flex items-center gap-2 w-full rounded-r-full capitalize text-left px-8 py-2"
-                >
-                    <i class="fa-solid fa-house"></i>
-                    <Link :href="`/customer/${customers.id}/edit`"> Edit </Link>
-                </div>
-                <div
-                    class="flex items-center gap-2 w-full rounded-r-full capitalize text-left px-8 py-2"
-                >
-                    <i class="fa-solid fa-house"></i>
-                    <Link :href="`/customer/${customers.id}/todo`">
-                        Activity
-                    </Link>
-                </div>
-            </div>
-        </div>
+        <div><ProfileSidebar :customers="customers" /></div>
 
         <div class="w-full">
             <p class="mt-16 w-64 mb-5 text-2xl capitalize">akam kamal</p>
-            <Card class="mx-0 mt-0 px-5 py-5 space-y-1">
+            <Card class="p-5 mt-5 mx-0 space-y-1">
                 <div>
                     <form @submit.prevent="submit">
                         <div class="grid grid-cols-2 gap-x-4 gap-y-6">
@@ -439,6 +407,7 @@
 <script setup>
 import Card from "../components/Card.vue";
 import { Link, useForm } from "@inertiajs/vue3";
+import ProfileSidebar from "../components/ProfileSidebar.vue";
 const props = defineProps({ customers: Object });
 const form = useForm({
     fullname: props.customers.fullname,
